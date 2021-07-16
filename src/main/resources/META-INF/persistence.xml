@@ -16,6 +16,10 @@
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
+
+            <!-- 아래 배치 사이즈만큼 쿼리문을 모아서 한 번에 전송함 -->
+            <property name="hibernate.jdbc.batch_size" value="10"/>
+
             <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
 <!--            <property name="hibernate.id.new_generator_mappings" value="true"></property>-->
         </properties>
