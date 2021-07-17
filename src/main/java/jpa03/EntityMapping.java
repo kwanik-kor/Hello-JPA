@@ -1,5 +1,8 @@
 package jpa03;
 
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 /**
  * 1) 객체와 테이블 매핑
  * 2) 기본 키 매핑
@@ -7,5 +10,11 @@ package jpa03;
  * 4) 연관관계 매핑
  */
 public class EntityMapping {
+
+    public static void main(String[] args) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
+
+        emf.close();
+    }
 
 }
