@@ -63,8 +63,8 @@ public class PersistEntity {
             //   --> Java의 Collection 쓰는 것과 동일한 거임!!!
             //  > 영속성 Context 의 1차 캐시에는 SnapShot도 존재함
             //   >> 스냅샷을 비교해서 해당 객체가 변경됐는지 여부를 확인하는 것임
-            Member member1 = em.find(Member.class, 102L);
-            member1.setName("ZZZZZZ");
+//            Member member1 = em.find(Member.class, 102L);
+//            member1.setName("ZZZZZZ");
 
             // 5) Flush
             //   --> '쓰기 지연 SQL 저장소'에 있던 Query들을 DB로 날려주는 것

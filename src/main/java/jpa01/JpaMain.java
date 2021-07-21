@@ -37,9 +37,9 @@ public class JpaMain {
             List<Member> result = em.createQuery("SELECT m FROM Member AS m", Member.class)
                     .getResultList();
 
-            for(Member member : result) {
-                System.out.println("member.getName() : " + member.getName());
-            }
+//            for(Member member : result) {
+//                System.out.println("member.getName() : " + member.getName());
+//            }
 
             tx.commit();
         } catch(Exception e) {
