@@ -13,6 +13,12 @@ import javax.persistence.Persistence;
  * 2) 기본 키 매핑
  * 3) 필드와 컬럼 매핑
  * 4) 연관관계 매핑
+ *  4.1) 다대일
+ *   - 객체는 참조용 필드가 있는 쪽으로만 참조가 가능하다
+ *   - 연관관계의 주인 : 외래 키를 관리하는 참조
+ *  4.2) 일대다
+ *   - 일대다 모델은 권장되지는 않음
+ *   - 추가로 Update Query가 나가게 됨
  */
 public class EntityMapping {
 

@@ -1,6 +1,8 @@
 package jpa01;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Member_2 {
@@ -20,6 +22,23 @@ public class Member_2 {
     @ManyToOne
     @JoinColumn(name = "TEAM_ID")
     private Team team;
+
+    // 일대일 관계 매핑
+    @OneToOne
+    @JoinColumn(name = "LOCKER_ID")
+    private Locker locker;
+
+    // 다대다 관계 매핑
+    // --> 관계 테이블을 Entity로 승격해서 OneToMany ManyToOne 관계를 만들어줌
+//    @ManyToMany
+//    @JoinTable(name = "MEMBER_PRODUCT")
+//    private List<Product> products = new ArrayList<>();
+
+    @OneToMany
+    @JoinColumn(name = "member")
+    private List<MemberProduct> memberProducts = new ArrayList<>();
+
+    // ===========================
 
     public Long getId() {
         return id;

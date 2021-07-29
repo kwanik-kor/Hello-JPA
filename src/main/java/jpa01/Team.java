@@ -15,6 +15,7 @@ public class Team {
     private String name;
 
     // write field name on opposite side
+    // 다대일 인 경우
     @OneToMany(mappedBy = "team")
     private List<Member_2> members = new ArrayList<>();
 
@@ -23,6 +24,11 @@ public class Team {
         member.setTeam(this);
         members.add(member);
     }
+
+    // 일대다
+//    @OneToMany
+//    @JoinColumn(name = "TEAM_ID")
+//    public List<Member> members = new ArrayList<>();
 
     public Long getId() {
         return id;
